@@ -1,7 +1,8 @@
 ==================================
 N64 to Gamecube Controller Adapter
 ==================================
-
+All of the code is the same as the original from brownman with the only change being
+being Gamecube Z is mapped to N64 C-down
 In 2009, I wanted to play some N64 games of mine, but all the
 controllers had worn down control sticks and it made things frustrating. I
 looked at cleaning or repairing them, but after a few failed attempts, it was
