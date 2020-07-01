@@ -102,10 +102,11 @@ Attaching the Pull-up Resistor
 The protocol requires the data line to be idle-high, so **attach the 1K
 resistor between digital I/O 2 and the 3.3V supply**. This will keep the line
 at 3.3V unless the Arduino or the controller pulls it down to ground.
+Mine didn't need this since the controller does this it self but it is good pratice to do this.
 
 Compiling the Code
 ------------------
-``gamecube.pde`` provided is the entire source. You can open it with the
+``gamecube.ino`` provided is the entire source. You can open it with the
 Arduino IDE and compile it, that should work. I've also provided a Makefile
 that I used when developing it (since I needed to analyze the pre-assembled
 code). If you use the makefile, you may need to edit the top for the locations
@@ -159,7 +160,7 @@ outputs on the N64 "controller" in a non-linear fashion.
     controller) are along the X axis, while outputs (to the N64) are on the Y
     axis.
 
-To turn this off, head to line 279 in ``gamecube.pde`` and change the 0 to a 1.
+To turn this off, head to line 279 in ``gamecube.ino`` and change the 0 to a 1.
 In my experience, this curve helps in some games, but hurts in others.
 
 Method
