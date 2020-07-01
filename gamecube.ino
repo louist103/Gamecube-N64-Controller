@@ -195,7 +195,7 @@ static void gc_to_64()
     // Second byte to N64 should contain:
     // 0, 0, L, R, Cup, Cdown, Cleft, Cright
     //n64_buffer[1] |= (gc_status.data2 & 0x10) << 1; // Z -> L (who uses N64's L?)
-    n64_buffer[0] |= (gc_status.data2 & 0x10) << 1; // Z -> Z (changed to map Z to Z)
+    n64_buffer[1] |= (gc_status.data2 & 0x10) >> 2; // Z -> cdown? (changed to map Z to Z)
     n64_buffer[1] |= (gc_status.data2 & 0x20) >> 1; // R -> R
 
     // L and R pressed if the pressure sensitive button crosses
